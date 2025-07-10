@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit Post</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <h1>Edit Post by <%= post.username %></h1>
+
+  <form action="/posts/<%= post.id %>/edit" method="POST">
+    <label for="content">Edit Content:</label><br>
+    <textarea name="content" id="content" rows="5" cols="40"><%= post.content %></textarea><br><br>
+    <button type="submit">Update</button>
+  </form>
+  <br />
+  <a href="/posts">⬅ Back</a>
+</body>
+</html>

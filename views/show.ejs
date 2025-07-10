@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>View Post</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <h2>Here is your post</h2>
+  <p>ID: <%= post.id %></p>
+  <div class="post">
+    <h3 class="user">@ <%= post.username %></h3>
+    <h4><%= post.content %></h4>
+  </div>
+  <br />
+  <a href="/posts/<%= post.id %>/edit">Edit</a>
+  <form action="/posts/<%= post.id %>/delete" method="POST" style="display:inline;">
+    <button type="submit">Delete</button>
+  </form>
+  <br />
+  <a href="/posts">⬅ Back to All Posts</a>
+</body>
+</html>
